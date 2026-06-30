@@ -15,4 +15,8 @@ class AppUser {
   factory AppUser.fromJson(Map<String, dynamic> json) {
     return AppUser(id: json['id'] ?? '', username: json['username'] ?? '', gender: json['gender'] ?? '', age: json['age'] ?? 0, dob: DateTime.parse(json['dob']));
   }
+
+  Map<String, dynamic> toJson() {
+    return {'id': id, 'username': username, 'gender': gender, 'age': age, 'dob': dob.toIso8601String()};
+  }
 }
