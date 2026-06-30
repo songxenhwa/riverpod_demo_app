@@ -1,6 +1,6 @@
 # riverpod
 
-A new Flutter project.
+A simple Flutter project to study about RIverpod state management.
 
 ## Getting Started
 
