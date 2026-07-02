@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:riverpod_demo/Pages/login.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,13 +17,13 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              'Welcome to the app',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.red),
+              'Welcome :D',
+              style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold, color: Colors.red, fontFamily: 'Main'),
             ),
 
             InkWell(
               onTap: () {
-                print('click');
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
               },
               child: Container(
                 width: 120,
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                 child: Center(
                   child: Text(
                     'ENTER',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.red, fontFamily: 'Secondary'),
                   ),
                 ),
               ),
